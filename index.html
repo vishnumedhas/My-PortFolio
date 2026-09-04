@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vishnu Medhas — Java Full-Stack Developer</title>
+<meta name="description" content="Vishnu Medhas — Java Full-Stack Developer. Computer Science graduate building full-stack Java web applications with Spring Boot, REST APIs, and React.">
+<meta name="theme-color" content="#06070d">
+<!-- og:image/twitter:image use a relative path — once deployed, change to the full
+     https://yourdomain/your-image.jpg URL, since most social crawlers require an
+     absolute URL to render a link preview image. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vishnu Medhas — Java Full-Stack Developer">
+<meta property="og:description" content="Computer Science graduate building full-stack Java web applications with Spring Boot, Hibernate, MySQL, and React.">
+<meta property="og:image" content="your-image.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vishnu Medhas — Java Full-Stack Developer">
+<meta name="twitter:description" content="Computer Science graduate building full-stack Java web applications with Spring Boot, Hibernate, MySQL, and React.">
+<meta name="twitter:image" content="your-image.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235b8cff'/%3E%3Cstop offset='.55' stop-color='%23a855f7'/%3E%3Cstop offset='1' stop-color='%23ec4899'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='%2306070d'/%3E%3Ctext x='50' y='68' font-size='58' font-family='monospace' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="preloader-mark">VISHNU MEDHAS</div>
+  <div class="preloader-bar"><div class="preloader-bar-fill" id="preloaderFill"></div></div>
+</div>
+
+<!-- BACKGROUND LAYERS -->
+<canvas id="bg-canvas"></canvas>
+<div class="gradient-blobs">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+<div class="noise"></div>
+<div class="cursor-spotlight" id="cursorSpotlight"></div>
+<div class="page-transition" id="pageTransition"></div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo"><span class="lg-br">&lt;</span><span class="lg-name">Vishnu Medhas</span><span class="lg-br">/&gt;</span><span class="lg-dot"></span></a>
+    <ul class="nav-links" id="nav-links">
+      <div class="nav-indicator" id="navIndicator"></div>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="Vishnu_Medhas_Resume.pdf" class="nav-resume-btn" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Resume</a></li>
+    </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+  <div class="home-container">
+    <div class="home-left">
+      <div class="hero-eyebrow">
+        <span class="dot-live"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-name">I'm <em id="typed-name"></em></h1>
+      <div class="hero-role">Java Full-Stack Developer <span class="role-sep">&</span> Fresher</div>
+      <p class="hero-desc">Computer Science Engineering graduate (2026) building full-stack Java web applications with Spring Boot, Spring Data JPA, REST APIs, Hibernate, and MySQL — plus responsive front-ends with React and JavaScript.</p>
+      <div class="hero-pills">
+        <span>Java</span><span>Spring Boot</span><span>REST APIs</span><span>MySQL</span><span>React</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary magnetic">View My Work <i class="fas fa-arrow-right"></i></a>
+        <a href="Vishnu_Medhas_Resume.pdf" class="btn-ghost magnetic" target="_blank" rel="noopener">Download CV</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://linkedin.com/in/vishnu-medhas" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/vishnumedhas" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+        <a href="mailto:vishnumedhas11@gmail.com" aria-label="Email" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="home-right">
+      <div class="photo-frame">
+        <img src="your-image.jpg" alt="Vishnu Medhas">
+        <div class="photo-accent"></div>
+      </div>
+      <div class="stat-card stat-1"><span class="stat-num" data-count="2" data-suffix="+">0</span><span class="stat-lbl">Projects</span></div>
+      <div class="stat-card stat-2"><span class="stat-num" data-count="8" data-suffix="+">0</span><span class="stat-lbl">Technologies</span></div>
+      <div class="stat-card stat-3"><span class="stat-num" data-count="8" data-suffix=".6">0</span><span class="stat-lbl">CGPA</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint">scroll down <i class="fas fa-arrow-down"></i></div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span><i class="fab fa-java"></i> Java</span>
+    <span><i class="fas fa-leaf"></i> Spring Boot</span>
+    <span><i class="fas fa-code-branch"></i> Hibernate</span>
+    <span><i class="fas fa-database"></i> MySQL</span>
+    <span><i class="fab fa-react"></i> React.js</span>
+    <span><i class="fab fa-js"></i> JavaScript</span>
+    <span><i class="fab fa-html5"></i> HTML5</span>
+    <span><i class="fab fa-css3-alt"></i> CSS3</span>
+    <span><i class="fab fa-git-alt"></i> Git</span>
+    <span><i class="fab fa-java"></i> Java</span>
+    <span><i class="fas fa-leaf"></i> Spring Boot</span>
+    <span><i class="fas fa-code-branch"></i> Hibernate</span>
+    <span><i class="fas fa-database"></i> MySQL</span>
+    <span><i class="fab fa-react"></i> React.js</span>
+    <span><i class="fab fa-js"></i> JavaScript</span>
+    <span><i class="fab fa-html5"></i> HTML5</span>
+    <span><i class="fab fa-css3-alt"></i> CSS3</span>
+    <span><i class="fab fa-git-alt"></i> Git</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="section-container">
+    <div class="section-label">01 — About</div>
+    <h2 class="section-title">Who I Am</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a <strong>Computer Science Engineering graduate</strong> (2026) with hands-on experience building full-stack Java web applications using Spring Boot, Spring MVC, Spring Data JPA, REST APIs, Hibernate, and MySQL — from CRUD-based enterprise modules to secure REST APIs with JWT authentication.</p>
+        <p>I'm looking for an entry-level Software Developer / Java Developer role where I can apply my skills, keep growing as an engineer, and help deliver reliable, scalable software solutions.</p>
+        <div class="about-meta">
+          <div class="meta-item"><i class="fas fa-map-marker-alt"></i> Bangalore, Karnataka, India</div>
+          <div class="meta-item"><i class="fas fa-graduation-cap"></i> B.E. Computer Science, 2026</div>
+          <div class="meta-item"><i class="fas fa-envelope"></i> vishnumedhas11@gmail.com</div>
+        </div>
+      </div>
+      <div class="about-traits-col">
+        <div class="trait"><div class="trait-icon blue"><i class="fas fa-code"></i></div><div><strong>Frontend Dev</strong><p>HTML, CSS, JS, React</p></div></div>
+        <div class="trait"><div class="trait-icon green"><i class="fab fa-java"></i></div><div><strong>Java Developer</strong><p>OOP, Collections, Multithreading</p></div></div>
+        <div class="trait"><div class="trait-icon violet"><i class="fas fa-server"></i></div><div><strong>Backend Dev</strong><p>Spring Boot, Hibernate, JPA</p></div></div>
+        <div class="trait"><div class="trait-icon orange"><i class="fas fa-database"></i></div><div><strong>Database</strong><p>MySQL, SQL queries</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section section-alt">
+  <div class="section-container">
+    <div class="section-label">02 — Education</div>
+    <h2 class="section-title">Academic Background</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="edu-body">
+          <div class="edu-year">2022 – 2026</div>
+          <h3>Bachelor of Engineering (B.E.)</h3>
+          <div class="edu-field">Computer Science and Engineering · CGPA: 8.6/10</div>
+          <div class="edu-inst">Gates Institute of Technology, Gooty, Anantapur</div>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-icon"><i class="fas fa-school"></i></div>
+        <div class="edu-body">
+          <div class="edu-year">2022</div>
+          <h3>Class 12, State Board</h3>
+          <div class="edu-field">Score: 95.5%</div>
+          <div class="edu-inst">Narayana Junior College, Hindupur, Anantapur</div>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-icon"><i class="fas fa-school"></i></div>
+        <div class="edu-body">
+          <div class="edu-year">2020</div>
+          <h3>Class 10, State Board</h3>
+          <div class="edu-field">Score: 91%</div>
+          <div class="edu-inst">LRG Vidyalayam English Medium High School</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="section-container">
+    <div class="section-label">03 — Skills</div>
+    <h2 class="section-title">What I Work With</h2>
+    <div class="skills-layout">
+      <div class="skills-bars-col">
+        <div class="skills-col-title">Proficiency</div>
+        <div class="skill-row">
+          <div class="skill-meta"><span>Core Java</span><span>85%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-w="85"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta"><span>Spring Boot / Spring MVC</span><span>80%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-w="80"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta"><span>REST APIs / Hibernate</span><span>78%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-w="78"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta"><span>MySQL / SQL</span><span>82%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-w="82"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta"><span>HTML5 / CSS3 / JavaScript</span><span>85%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-w="85"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-meta"><span>React.js</span><span>65%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-w="65"></div></div>
+        </div>
+      </div>
+      <div class="tools-col">
+        <div class="skills-col-title">Tools & Technologies</div>
+        <div class="tools-wrap">
+          <div class="tool-chip"><i class="fab fa-java" style="color:#f89820"></i> Java</div>
+          <div class="tool-chip"><i class="fas fa-leaf" style="color:#6db33f"></i> Spring Boot</div>
+          <div class="tool-chip"><i class="fas fa-shield-alt" style="color:#6db33f"></i> Spring Security</div>
+          <div class="tool-chip"><i class="fas fa-code-branch" style="color:#59666c"></i> Hibernate</div>
+          <div class="tool-chip"><i class="fas fa-database" style="color:#4479A1"></i> MySQL</div>
+          <div class="tool-chip"><i class="fab fa-react" style="color:#61DAFB"></i> ReactJS</div>
+          <div class="tool-chip"><i class="fab fa-js" style="color:#F7DF1E"></i> JavaScript</div>
+          <div class="tool-chip"><i class="fab fa-html5" style="color:#E34F26"></i> HTML5</div>
+          <div class="tool-chip"><i class="fab fa-css3-alt" style="color:#1572B6"></i> CSS3</div>
+          <div class="tool-chip"><i class="fab fa-github" style="color:#e6e8ee"></i> Git & GitHub</div>
+          <div class="tool-chip"><i class="fas fa-code" style="color:#4da3ff"></i> Eclipse / STS</div>
+          <div class="tool-chip"><i class="fas fa-laptop-code" style="color:#7ea2ff"></i> VS Code</div>
+          <div class="tool-chip"><i class="fas fa-cubes" style="color:#c084fc"></i> Apache NetBeans</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section section-alt">
+  <div class="section-container">
+    <div class="section-label">04 — Experience</div>
+    <h2 class="section-title">Work History</h2>
+    <div class="exp-card">
+      <div class="exp-header">
+        <div>
+          <h3>Software Development Intern</h3>
+          <div class="exp-company">Dhee Coding Lab, Bangalore</div>
+        </div>
+        <div class="exp-badge">Jan 2026 – Present</div>
+      </div>
+      <p>Developed and maintained Java-based web applications using Servlets and JDBC to process client requests and database operations, improving backend processing reliability. Built responsive, cross-device UI components with HTML5, CSS3, and JavaScript, reducing UI defects and improving usability. Implemented full CRUD functionality for core application modules and managed session handling for secure, consistent state across web requests. Collaborated with a development team using Git and GitHub for version control, code reviews, and release management.</p>
+      <div class="exp-tags">
+        <span>Java</span><span>Servlets</span><span>JDBC</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>MySQL</span><span>Git</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section projects-section">
+  <div class="section-container projects-intro">
+    <div class="section-label">05 — Projects</div>
+    <h2 class="section-title">Selected Work</h2>
+    <p class="projects-hint" id="projectsHint"><i class="fas fa-arrows-left-right"></i> Scroll to explore</p>
+  </div>
+  <div class="projects-pin-wrapper" id="projectsPinWrapper">
+    <div class="projects-track" id="projectsTrack">
+
+      <div class="project-item">
+        <div class="project-num">01</div>
+        <div class="project-header">
+          <div class="project-visual ecom"><i class="fas fa-shopping-cart"></i></div>
+          <div class="project-info">
+            <h3>E-Commerce Web Application</h3>
+            <p>Full-stack e-commerce application with product catalog management, shopping cart, and order processing, built on Spring Boot, Spring Data JPA, and MySQL.</p>
+          </div>
+        </div>
+        <div class="project-highlights">
+          <div class="ph-item"><strong>REST</strong><span>APIs</span></div>
+          <div class="ph-item"><strong>JWT</strong><span>Auth</span></div>
+          <div class="ph-item"><strong>Cart</strong><span>& Checkout</span></div>
+          <div class="ph-item"><strong>Role</strong><span>Based</span></div>
+        </div>
+        <div class="project-tags">
+          <span>Java</span><span>Spring Boot</span><span>Spring Data JPA</span><span>Spring Security</span><span>MySQL</span><span>JWT</span>
+        </div>
+        <div class="project-links">
+          <!-- Update with the exact repo URL once you push this project to GitHub -->
+          <a href="https://github.com/vishnumedhas" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-num">02</div>
+        <div class="project-header">
+          <div class="project-visual emp"><i class="fas fa-users-cog"></i></div>
+          <div class="project-info">
+            <h3>Employee Management System</h3>
+            <p>Dynamic web application using Java Servlets and JDBC to perform CRUD operations on employee records, backed by a structured MySQL schema.</p>
+          </div>
+        </div>
+        <div class="project-highlights">
+          <div class="ph-item"><strong>CRUD</strong><span>Records</span></div>
+          <div class="ph-item"><strong>MySQL</strong><span>Schema</span></div>
+          <div class="ph-item"><strong>OOP</strong><span>Design</span></div>
+          <div class="ph-item"><strong>Modular</strong><span>Codebase</span></div>
+        </div>
+        <div class="project-tags">
+          <span>Java</span><span>Servlets</span><span>JDBC</span><span>MySQL</span>
+        </div>
+        <div class="project-links">
+          <!-- Update with the exact repo URL once you push this project to GitHub -->
+          <a href="https://github.com/vishnumedhas" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates" class="section section-alt">
+  <div class="section-container">
+    <div class="section-label">06 — Recognition</div>
+    <h2 class="section-title">Certificates & Activities</h2>
+    <div class="recog-grid">
+      <div class="recog-col">
+        <div class="recog-subtitle">Certifications</div>
+        <div class="badge-grid">
+          <a class="badge-card" href="java-fullstack-internship-certificate.pdf" target="_blank" rel="noopener noreferrer">
+            <div class="badge-icon" style="--c:#f89820"><i class="fab fa-java"></i></div>
+            <strong>Java Full Stack Developer Virtual Internship</strong>
+            <span>AICTE EduSkills · Oct–Dec 2025</span>
+          </a>
+          <!-- Add a link (href="your-certificate.pdf") once you have the PDF for this course -->
+          <div class="badge-card">
+            <div class="badge-icon" style="--c:#4ade80"><i class="fas fa-layer-group"></i></div>
+            <strong>Full Stack Development Course</strong>
+            <span>Dhee Coding Lab · In Progress</span>
+          </div>
+        </div>
+      </div>
+      <div class="recog-col">
+        <div class="recog-subtitle">Achievements</div>
+        <div class="badge-grid">
+          <div class="badge-card">
+            <div class="badge-icon" style="--c:#38bdf8"><i class="fas fa-users"></i></div>
+            <strong>Teamwork & Leadership</strong>
+            <span>Demonstrated collaborating on academic and technical projects</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECT -->
+<section id="connect" class="section">
+  <div class="section-container">
+    <div class="section-label">07 — Connect</div>
+    <h2 class="section-title">Find Me Online</h2>
+    <div class="connect-row">
+      <a href="https://linkedin.com/in/vishnu-medhas" class="connect-card" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" style="color:#4da3ff"></i><span>LinkedIn</span></a>
+      <a href="https://github.com/vishnumedhas" class="connect-card" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" style="color:#e6e8ee"></i><span>GitHub</span></a>
+      <a href="mailto:vishnumedhas11@gmail.com" class="connect-card" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope" style="color:#ec4899"></i><span>Email</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section section-alt">
+  <div class="section-container">
+    <div class="section-label">08 — Contact</div>
+    <h2 class="section-title">Get In <em style="font-style:italic;background:var(--gradient-text);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:300;">Touch</em></h2>
+    <div class="contact-grid">
+      <div class="contact-form-box">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="contact-name" placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label>Your Email</label>
+            <input type="email" id="contact-email" placeholder="john@example.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" id="contact-subject" placeholder="Project enquiry / collaboration">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea id="contact-message" placeholder="Tell me about your project..."></textarea>
+        </div>
+        <div id="contact-error"></div>
+        <div class="form-actions">
+          <button type="button" class="btn-send magnetic" onclick="sendEmail()"><i class="fas fa-paper-plane"></i> Send Message</button>
+          <button type="button" class="btn-whatsapp magnetic" onclick="sendWhatsApp()"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+        </div>
+      </div>
+      <div class="contact-info-box">
+        <h3>Contact Details</h3>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="info-label">Email</div>
+            <div class="info-value">vishnumedhas11@gmail.com</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="info-label">Location</div>
+            <div class="info-value">Bangalore, Karnataka, India</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fab fa-linkedin-in"></i></div>
+          <div>
+            <div class="info-label">LinkedIn</div>
+            <div class="info-value">linkedin.com/in/vishnu-medhas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-brand">Vishnu Medhas<span>.</span></div>
+      <div class="footer-sub">Java Full-Stack Developer</div>
+    </div>
+    <div class="footer-center">© 2026 Vishnu Medhas. All rights reserved.</div>
+    <div class="footer-right">
+      <a href="https://linkedin.com/in/vishnu-medhas" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/vishnumedhas" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+      <a href="mailto:vishnumedhas11@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+
+<a href="#home" class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></a>
+
+<!-- EmailJS: sign up free at emailjs.com, then replace the public key below
+     and the service_id/template_id in script.js's sendEmail() function -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script type="module" src="three-bg.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

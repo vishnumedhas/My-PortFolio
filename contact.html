@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Vishnu Medhas</title>
+<meta name="description" content="Get in touch with Vishnu Medhas — Java Full-Stack Developer, open to entry-level opportunities.">
+<meta name="theme-color" content="#06070d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact — Vishnu Medhas">
+<meta property="og:description" content="Get in touch with Vishnu Medhas — Java Full-Stack Developer, open to entry-level opportunities.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Contact — Vishnu Medhas">
+<meta name="twitter:description" content="Get in touch with Vishnu Medhas — Java Full-Stack Developer, open to entry-level opportunities.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235b8cff'/%3E%3Cstop offset='.55' stop-color='%23a855f7'/%3E%3Cstop offset='1' stop-color='%23ec4899'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='%2306070d'/%3E%3Ctext x='50' y='68' font-size='58' font-family='monospace' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EV%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Fira+Code:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+  .contact-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 40px 80px;
+  }
+  .contact-wrapper { max-width: 960px; width: 100%; position: relative; z-index: 2; }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.85rem; font-weight: 600; color: var(--mid);
+    text-decoration: none; margin-bottom: 48px;
+    transition: color 0.2s, transform 0.2s;
+  }
+  .back-link:hover { color: var(--ink); transform: translateX(-3px); }
+  .contact-header { margin-bottom: 48px; }
+  .contact-header .section-label { margin-bottom: 10px; }
+  .contact-header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700; letter-spacing: -0.03em;
+    color: var(--ink); line-height: 1.1; margin-bottom: 12px;
+  }
+  .contact-header h1 em {
+    font-style: italic; font-weight: 300;
+    background: var(--gradient-text);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .contact-header p { color: var(--mid); font-size: 1rem; }
+  @media (max-width: 700px) {
+    .contact-page { padding: 100px 20px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="preloader">
+  <div class="preloader-mark">VISHNU MEDHAS</div>
+  <div class="preloader-bar"><div class="preloader-bar-fill" id="preloaderFill"></div></div>
+</div>
+
+<canvas id="bg-canvas"></canvas>
+<div class="gradient-blobs">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+<div class="noise"></div>
+<div class="cursor-spotlight" id="cursorSpotlight"></div>
+<div class="page-transition" id="pageTransition"></div>
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollProgressBar"></div></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="contact-page">
+  <div class="contact-wrapper">
+
+    <a href="index.html" class="back-link magnetic"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+
+    <div class="contact-header">
+      <div class="section-label">Get In Touch</div>
+      <h1>Let's <em>work</em> together</h1>
+      <p>Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-form-box">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="contact-name" placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label>Your Email</label>
+            <input type="email" id="contact-email" placeholder="john@example.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" id="contact-subject" placeholder="Project enquiry / collaboration / opportunity">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea id="contact-message" placeholder="Tell me about your project, opportunity, or just say hello..."></textarea>
+        </div>
+        <div id="contact-error"></div>
+        <div class="form-actions">
+          <button type="button" class="btn-send magnetic" onclick="sendEmail()"><i class="fas fa-paper-plane"></i> Send Message</button>
+          <button type="button" class="btn-whatsapp magnetic" onclick="sendWhatsApp()"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+        </div>
+      </div>
+
+      <div class="contact-info-box">
+        <h3>Contact Details</h3>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="info-label">Email</div>
+            <div class="info-value">vishnumedhas11@gmail.com</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="info-label">Location</div>
+            <div class="info-value">Bangalore, Karnataka, India</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fab fa-linkedin-in"></i></div>
+          <div>
+            <div class="info-label">LinkedIn</div>
+            <div class="info-value">linkedin.com/in/vishnu-medhas</div>
+          </div>
+        </div>
+
+        <div class="avail-box">
+          <h4>Currently available</h4>
+          <span class="avail-pill"><span class="dot-live" style="width:6px;height:6px;"></span> Open to entry-level Software/Java Developer roles</span>
+          <p>I usually reply within 24 hours. For anything urgent, WhatsApp is fastest.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<a href="index.html#home" class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script type="module" src="three-bg.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
