@@ -439,7 +439,7 @@ function sendEmail() {
   btn.disabled = true;
   btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
   // Sign up free at emailjs.com and replace these two IDs with your own service/template IDs
-  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', { name, email, subject: subject || 'Portfolio Contact from ' + name, message })
+  emailjs.send('service_2y3d4mb', 'template_w9uutdd', { name, email, subject: subject || 'Portfolio Contact from ' + name, message })
     .then(() => {
       btn.disabled = false;
       btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
